@@ -161,28 +161,26 @@ namespace Merkle_Hellman
             for (var i = index; i < simple.Count; i++)
             {
                 int remainder = targetSum - simple[i];
-                // if the current number is too big for the target, skip
+                // если текущее число слишком велико для целевого значения, пропустите
                 if (remainder < 0)
                     continue;
-                // if the current number is a solution, return a list with it
+                // если текущий номер является решением, верните список с ним
                 if (remainder == 0)
                     return new List<int>() { simple[i] };
 
-                // otherwise try to find a sum for the remainder later in the list
+                // в противном случае попробуйте найти сумму для остатка позже в списке
                 var s = FindSum(simple, remainder, i + 1);
 
-                // if no number was returned, we couldn't find a solution, so skip
+                // если номер не был возвращен, мы не смогли найти решение, поэтому пропустите
                 if (s.Count == 0)
                     continue;
 
-                // otherwise we found a solution, so add our current number to it
-                // and return the result
+                // в противном случае мы нашли решение, поэтому добавьте к нему наш текущий номер и верните результат
                 s.Insert(0, simple[i]);
                 return s;
             }
 
-            // if we end up here, we checked all the numbers in the list and
-            // found no solution
+            // если мы окажемся здесь, мы проверили все номера в списке и не нашли решения
             return new List<int>();
         }
         
