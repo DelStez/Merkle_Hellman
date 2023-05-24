@@ -4,7 +4,7 @@
     <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-        <ProjectGuid>{185ABC3D-5133-4157-B8CA-61CE82BA807B}</ProjectGuid>
+        <ProjectGuid>{6751CED4-ED0B-412B-B788-7D75ABE7863F}</ProjectGuid>
         <OutputType>WinExe</OutputType>
         <RootNamespace>Merkle_Hellman</RootNamespace>
         <AssemblyName>Merkle_Hellman</AssemblyName>
@@ -52,7 +52,6 @@
         <Compile Include="Form1.Designer.cs">
             <DependentUpon>Form1.cs</DependentUpon>
         </Compile>
-        <Compile Include="MerkleHellmanCore.cs" />
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <EmbeddedResource Include="Form1.resx">

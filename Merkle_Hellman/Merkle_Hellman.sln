@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merkle_Hellman", "Merkle_Hellman.csproj", "{185ABC3D-5133-4157-B8CA-61CE82BA807B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Merkle_Hellman", "Merkle_Hellman.csproj", "{6751CED4-ED0B-412B-B788-7D75ABE7863F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -8,9 +8,9 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{185ABC3D-5133-4157-B8CA-61CE82BA807B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{185ABC3D-5133-4157-B8CA-61CE82BA807B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{185ABC3D-5133-4157-B8CA-61CE82BA807B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{185ABC3D-5133-4157-B8CA-61CE82BA807B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6751CED4-ED0B-412B-B788-7D75ABE7863F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6751CED4-ED0B-412B-B788-7D75ABE7863F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6751CED4-ED0B-412B-B788-7D75ABE7863F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6751CED4-ED0B-412B-B788-7D75ABE7863F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
