@@ -18,7 +18,7 @@ namespace Merkle_Hellman
 
         public List<int> CalculateHardknapsacks(List<int> simlpeknapsacks, int w, int n)
         {
-            PrintToScreen("**** Calculating Hard knapsacks ****", Color.Green);
+            PrintToScreen("**** Расчет жестких рюкзаков ****", Color.Green);
             var res = new List<int>();
             for (int i = 0; i < simlpeknapsacks.Count; i++)
             {
@@ -46,7 +46,7 @@ namespace Merkle_Hellman
             }
             PrintToScreen("P = " + str);
 
-            PrintToScreen("**** Adjust sub Message length of " + m + " ****");
+            PrintToScreen("**** Отрегулируйте длину вложенного сообщения " + m + " ****");
             var listAdjusted = CheckMessageLength(list, hard.Count);
 
             var strA = "";
@@ -56,7 +56,7 @@ namespace Merkle_Hellman
             }
             PrintToScreen("P = " + strA);
 
-            PrintToScreen("**** Calculation cipher Sum  ****", Color.Green);
+            PrintToScreen("**** Вычисление суммы шифра ****", Color.Green);
 
             var result = new List<int>();
             foreach (var ele in listAdjusted)
@@ -70,7 +70,7 @@ namespace Merkle_Hellman
                 result.Add(count);
                 //result.Add(hard.Select((t, i) => ele[i] * t).Sum());
             }
-            PrintToScreen("Cipher Sum = [" + string.Join(",", result) + "]", Color.Blue);
+            PrintToScreen("Сумма шифра= [" + string.Join(",", result) + "]", Color.Blue);
             PrintToScreen("**************************************", Color.MediumPurple);
 
             return result;
@@ -80,7 +80,7 @@ namespace Merkle_Hellman
         // W-1 = (w^n-2)%n
         public int CalculateWinvers(int w, int n)
         {
-            PrintToScreen("**** Calculating W Inverse ****", Color.Green);
+            PrintToScreen("**** Вычисление W обратного ****", Color.Green);
             PrintToScreen("**** W-1 = (w^n-2)%n ****", Color.DodgerBlue);
             var big = BigInteger.ModPow(w, n - 2, n);
             // var temp = (BigInteger)Math.Pow(w, n - 2);
@@ -93,13 +93,13 @@ namespace Merkle_Hellman
 
         public List<List<int>> DecryptMessage(List<int> message, int wi, int n, List<int> s)
         {
-            PrintToScreen("**** Decrypting  Message ****", Color.Green);
+            PrintToScreen("**** Расшифровывающее сообщение ****", Color.Green);
             var res = new List<List<int>>();
             foreach (var num in message)
             {
                 var temp = (num * wi) % n;
                 PrintToScreen("(" + num + "*" + wi + ") mod " + n + " = " + temp);
-                PrintToScreen("**** Find Message Sum  ****");
+                PrintToScreen("**** Найти сумму сообщения  ****");
 
                 var sumList = FindSum(s, temp);
                 var mappedList = MapMessageList(s, sumList);
@@ -113,14 +113,14 @@ namespace Merkle_Hellman
                 str += string.Join("", l);
             }
 
-            PrintToScreen("Plain Text = [" + str + "]", Color.Blue);
+            PrintToScreen("Открытый текст = [" + str + "]", Color.Blue);
             PrintToScreen("**************************************", Color.MediumPurple);
             return res;
         }
 
         private void PrintToScreen(string text, Color color = default(Color))
         {
-            _myFormControl.Invoke(_myFormControl.UpdateTextBox, text, color); // updates textbox9 on winForm
+            _myFormControl.Invoke(_myFormControl.UpdateTextBox, text, color); // обновляет текстовое поле №9 в WinForm
 
         }
 
@@ -161,28 +161,26 @@ namespace Merkle_Hellman
             for (var i = index; i < simple.Count; i++)
             {
                 int remainder = targetSum - simple[i];
-                // if the current number is too big for the target, skip
+                // если текущее число слишком велико для целевого значения, пропустите
                 if (remainder < 0)
                     continue;
-                // if the current number is a solution, return a list with it
+                // если текущее число является решением, верните список с ним
                 if (remainder == 0)
                     return new List<int>() { simple[i] };
 
-                // otherwise try to find a sum for the remainder later in the list
+                // в противном случае попробуйте найти сумму для остатка позже в списке
                 var s = FindSum(simple, remainder, i + 1);
 
-                // if no number was returned, we couldn't find a solution, so skip
+                // если номер не был возвращен, мы не смогли найти решение, поэтому пропустите
                 if (s.Count == 0)
                     continue;
 
-                // otherwise we found a solution, so add our current number to it
-                // and return the result
+                // в противном случае мы нашли решение, поэтому добавьте к нему наш текущий номер и верните результат
                 s.Insert(0, simple[i]);
                 return s;
             }
 
-            // if we end up here, we checked all the numbers in the list and
-            // found no solution
+            // если мы окажемся здесь, мы проверим все номера в списке и не найдем решения
             return new List<int>();
         }
 

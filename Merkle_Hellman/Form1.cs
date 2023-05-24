@@ -12,8 +12,8 @@ namespace Merkle_Hellman
 {
     public partial class Form1 : Form
     {
-        public delegate void UpdateTextBoxDelegate(string textBoxString, Color color); // delegate type 
-        public UpdateTextBoxDelegate UpdateTextBox; // delegate object
+        public delegate void UpdateTextBoxDelegate(string textBoxString, Color color); // тип делегата 
+        public UpdateTextBoxDelegate UpdateTextBox; // объект делегата
         public MyMerkleHellman MyMerkleHellmanClass;
 
         private void UpdateTextBoxMethod(string str, Color color = default(Color))
@@ -29,7 +29,7 @@ namespace Merkle_Hellman
         public Form1()
         {
             InitializeComponent();
-            UpdateTextBox = UpdateTextBoxMethod; // initialize delegate object
+            UpdateTextBox = UpdateTextBoxMethod; // инициализировать объект делегата
             MyMerkleHellmanClass = new MyMerkleHellman(this);
 
         }
@@ -69,7 +69,7 @@ namespace Merkle_Hellman
             try
             {
                 UpdateTextBoxMethod("**************************************", Color.Red);
-                UpdateTextBoxMethod("******** Start Encryption ************", Color.Red);
+                UpdateTextBoxMethod("******** Запуск шифрования ************", Color.Red);
                 UpdateTextBoxMethod("**************************************", Color.Red);
 
                 List<int> h;
@@ -101,7 +101,7 @@ namespace Merkle_Hellman
             try
             {
                 UpdateTextBoxMethod("**************************************", Color.Red);
-                UpdateTextBoxMethod("******** Start Decryption ************", Color.Red);
+                UpdateTextBoxMethod("******** Начать расшифровку ************", Color.Red);
                 UpdateTextBoxMethod("**************************************", Color.Red);
 
                 var msg = textBox7.Text.TrimEnd(',').Split(',').ToList().Select(z => Convert.ToInt32(z)).ToList();

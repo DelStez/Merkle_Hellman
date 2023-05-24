@@ -146,7 +146,7 @@
             this.label5.AutoSize = true;
             this.label5.Location = new System.Drawing.Point(20, 220);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(73, 13);
+            this.label5.Size = new System.Drawing.Size(74, 13);
             this.label5.TabIndex = 9;
             this.label5.Text = "Public Key (H)";
             // 
@@ -155,7 +155,7 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(20, 270);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 13);
+            this.label6.Size = new System.Drawing.Size(50, 13);
             this.label6.TabIndex = 10;
             this.label6.Text = "Plain text";
             // 
@@ -164,7 +164,7 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(19, 309);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(56, 13);
+            this.label7.Size = new System.Drawing.Size(55, 13);
             this.label7.TabIndex = 11;
             this.label7.Text = "Encrypted";
             // 
@@ -215,7 +215,7 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(20, 182);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(114, 13);
+            this.label8.Size = new System.Drawing.Size(111, 13);
             this.label8.TabIndex = 20;
             this.label8.Text = "Muliplier inverse (W-1)";
             // 
@@ -251,7 +251,7 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(20, 351);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 13);
+            this.label9.Size = new System.Drawing.Size(50, 13);
             this.label9.TabIndex = 24;
             this.label9.Text = "Plain text";
             // 
@@ -271,9 +271,9 @@
             this.label10.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.label10.Location = new System.Drawing.Point(23, 20);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(390, 35);
+            this.label10.Size = new System.Drawing.Size(233, 35);
             this.label10.TabIndex = 26;
-            this.label10.Text = "Merkle-Hellman-Simulation";
+            this.label10.Text = "Merkle-Hellman";
             // 
             // richTextBox1
             // 
