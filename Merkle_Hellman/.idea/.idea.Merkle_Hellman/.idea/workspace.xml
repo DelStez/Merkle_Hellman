@@ -8,20 +8,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abd1630b-1358-4b69-a44e-321afc667f6b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Merkle_Hellman/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Merkle_Hellman/.idea/discord.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Merkle_Hellman/.idea/discord.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Merkle_Hellman/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Merkle_Hellman/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MerkleHellmanSimulation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Merkle_Hellman/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Merkle_Hellman/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Form1.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MerkleHellmanCore.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Merkle_Hellman.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Merkle_Hellman.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Merkle_Hellman.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Merkle_Hellman.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Properties/AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/93a8f82184b4439ca5abff025375fe32564da0/61/eaec714f/Random.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -71,7 +71,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1684963349682</updated>
-      <workItem from="1684963349804" duration="1798000" />
+      <workItem from="1684963349804" duration="3972000" />
+      <workItem from="1684967550637" duration="336000" />
     </task>
     <servers />
   </component>
@@ -79,8 +80,19 @@
     <option name="version" value="3" />
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
@@ -89,16 +101,29 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Form1.cs</url>
-          <line>45</line>
+          <line>12</line>
           <properties documentPath="G:\GitHub\Merkle_Hellman\Merkle_Hellman\Form1.cs" initialLine="45" containingFunctionPresentation="method 'button1_Click'">
             <startOffsets>
-              <option value="1297" />
+              <option value="1450" />
             </startOffsets>
             <endOffsets>
-              <option value="1298" />
+              <option value="1451" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Form1.cs</url>
+          <line>165</line>
+          <properties documentPath="G:\GitHub\Merkle_Hellman\Merkle_Hellman\Form1.cs" initialLine="143" containingFunctionPresentation="method 'button2_Click'">
+            <startOffsets>
+              <option value="3750" />
+            </startOffsets>
+            <endOffsets>
+              <option value="3778" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
