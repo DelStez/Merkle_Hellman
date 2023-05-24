@@ -24,7 +24,7 @@ namespace Merkle_Hellman
             richTextBox1.AppendText(str + Environment.NewLine);
             richTextBox1.SelectionColor = richTextBox1.ForeColor;
 
-        } // this method is invoked
+        } // этот метод вызывается
 
         public Form1()
         {
@@ -161,6 +161,11 @@ namespace Merkle_Hellman
             textBox8.Clear();
             textBox10.Clear();
             richTextBox1.Clear();
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

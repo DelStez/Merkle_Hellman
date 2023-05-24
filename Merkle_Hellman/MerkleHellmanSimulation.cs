@@ -18,7 +18,7 @@ namespace Merkle_Hellman
 
         public List<int> CalculateHardknapsacks(List<int> simlpeknapsacks, int w, int n)
         {
-            PrintToScreen("**** Расчет жестких рюкзаков ****", Color.Green);
+            PrintToScreen("**** Расчет тяжелых рюкзаков ****", Color.Green);
             var res = new List<int>();
             for (int i = 0; i < simlpeknapsacks.Count; i++)
             {
@@ -34,9 +34,9 @@ namespace Merkle_Hellman
 
         public List<int> EncryptMessage(List<int> hard, string message)
         {
-            PrintToScreen("**** Encrypting  Message ****", Color.Green);
+            PrintToScreen("**** Шифрования сообщение ****", Color.Green);
             var m = hard.Count;
-            PrintToScreen("**** Split Message to length of " + m + " ****");
+            PrintToScreen("**** Разделить сообщение на длину" + m + " ****");
             var list = Split(message.ToList(), m);
 
             var str = "";
