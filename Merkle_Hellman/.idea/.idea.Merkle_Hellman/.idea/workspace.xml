@@ -8,6 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="abd1630b-1358-4b69-a44e-321afc667f6b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Merkle_Hellman/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Merkle_Hellman/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Form1.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Form1.Designer.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Form1.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Form1.cs" afterDir="false" />
     </list>
@@ -68,7 +69,7 @@
       <option name="presentableId" value="Default" />
       <updated>1684963349682</updated>
       <workItem from="1684963349804" duration="3972000" />
-      <workItem from="1684967550637" duration="1169000" />
+      <workItem from="1684967550637" duration="3094000" />
     </task>
     <servers />
   </component>
@@ -110,7 +111,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Form1.cs</url>
-          <line>170</line>
+          <line>181</line>
           <properties documentPath="G:\GitHub\Merkle_Hellman\Merkle_Hellman\Form1.cs" initialLine="143" containingFunctionPresentation="method 'button2_Click'">
             <startOffsets>
               <option value="3750" />

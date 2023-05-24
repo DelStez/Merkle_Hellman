@@ -18,11 +18,11 @@ namespace Merkle_Hellman
 
         private void UpdateTextBoxMethod(string str, Color color = default(Color))
         {
-            richTextBox1.SelectionStart = richTextBox1.TextLength;
-            richTextBox1.SelectionLength = 0;
-            richTextBox1.SelectionColor = color;
-            richTextBox1.AppendText(str + Environment.NewLine);
-            richTextBox1.SelectionColor = richTextBox1.ForeColor;
+            LogsBox.SelectionStart = LogsBox.TextLength;
+            LogsBox.SelectionLength = 0;
+            LogsBox.SelectionColor = color;
+            LogsBox.AppendText(str + Environment.NewLine);
+            LogsBox.SelectionColor = LogsBox.ForeColor;
 
         } // этот метод вызывается
 
@@ -87,8 +87,10 @@ namespace Merkle_Hellman
                 {
                     h = textBox5.Text.TrimEnd(',').Split(',').ToList().Select(z => Convert.ToInt32(z)).ToList();
                 }
-                var enc = MyMerkleHellmanClass.EncryptMessage(h, textBox6.Text.Replace(" ", ""));
-                textBox7.Text = string.Join(",", enc);
+                byte[] byteArray = Encoding.UTF8.GetBytes(textBox6.Text);
+                string bitString = string.Join("", byteArray.Select(b => Convert.ToString(b, 2).PadLeft(8, '0')).ToArray());
+                var enc = MyMerkleHellmanClass.EncryptMessage(h, bitString.Replace(" ", ""));
+                EBox.Text = string.Join(",", enc);
             }
             catch (Exception exception)
             {
@@ -104,7 +106,7 @@ namespace Merkle_Hellman
                 UpdateTextBoxMethod("******** Начать расшифровку ************", Color.Red);
                 UpdateTextBoxMethod("**************************************", Color.Red);
 
-                var msg = textBox7.Text.TrimEnd(',').Split(',').ToList().Select(z => Convert.ToInt32(z)).ToList();
+                var msg = EBox.Text.TrimEnd(',').Split(',').ToList().Select(z => Convert.ToInt32(z)).ToList();
                 var w = Convert.ToInt32(textBox2.Text);
                 var n = Convert.ToInt32(textBox3.Text);
                 int wi;
@@ -126,7 +128,16 @@ namespace Merkle_Hellman
                     str += string.Join("", list);
 
                 }
-                textBox10.Text = str;
+                // преобразование битовой строки в байтовый массив
+                byte[] byteArray = new byte[str.Length / 8];
+                for (int i = 0; i < byteArray.Length; i++)
+                {
+                    byteArray[i] = Convert.ToByte(str.Substring(i * 8, 8), 2);
+                }
+
+// преобразование байтового массива в строку с помощью кодировки UTF-8
+                string result = Encoding.UTF8.GetString(byteArray);
+                PBox.Text = result;
             }
             catch (Exception exception)
             {
@@ -157,10 +168,10 @@ namespace Merkle_Hellman
             textBox4.Clear();
             textBox5.Clear();
             textBox6.Clear();
-            textBox7.Clear();
+            EBox.Clear();
             textBox8.Clear();
-            textBox10.Clear();
-            richTextBox1.Clear();
+            PBox.Clear();
+            LogsBox.Clear();
         }
 
         private void label10_Click(object sender, EventArgs e)

@@ -43,17 +43,17 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.EBox = new System.Windows.Forms.TextBox();
+            this.encryptButton = new System.Windows.Forms.Button();
+            this.decryptButton = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.textBox8 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.clearButton = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.PBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.LogsBox = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // textBox1
@@ -183,32 +183,32 @@
             this.textBox6.TabIndex = 14;
             this.textBox6.Text = "0100101110100101";
             // 
-            // textBox7
+            // EBox
             // 
-            this.textBox7.Location = new System.Drawing.Point(73, 264);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(284, 20);
-            this.textBox7.TabIndex = 15;
+            this.EBox.Location = new System.Drawing.Point(73, 264);
+            this.EBox.Name = "EBox";
+            this.EBox.Size = new System.Drawing.Size(284, 20);
+            this.EBox.TabIndex = 15;
             // 
-            // button2
+            // encryptButton
             // 
-            this.button2.Location = new System.Drawing.Point(13, 340);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(110, 44);
-            this.button2.TabIndex = 17;
-            this.button2.Text = "Encrypt";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.encryptButton.Location = new System.Drawing.Point(13, 340);
+            this.encryptButton.Name = "encryptButton";
+            this.encryptButton.Size = new System.Drawing.Size(110, 44);
+            this.encryptButton.TabIndex = 17;
+            this.encryptButton.Text = "Encrypt";
+            this.encryptButton.UseVisualStyleBackColor = true;
+            this.encryptButton.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // decryptButton
             // 
-            this.button3.Location = new System.Drawing.Point(129, 340);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(116, 44);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Decrypt";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.decryptButton.Location = new System.Drawing.Point(129, 340);
+            this.decryptButton.Name = "decryptButton";
+            this.decryptButton.Size = new System.Drawing.Size(116, 44);
+            this.decryptButton.TabIndex = 18;
+            this.decryptButton.Text = "Decrypt";
+            this.decryptButton.UseVisualStyleBackColor = true;
+            this.decryptButton.Click += new System.EventHandler(this.button3_Click);
             // 
             // label8
             // 
@@ -236,15 +236,15 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button5
+            // clearButton
             // 
-            this.button5.Location = new System.Drawing.Point(251, 340);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(106, 44);
-            this.button5.TabIndex = 23;
-            this.button5.Text = "Clear";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.clearButton.Location = new System.Drawing.Point(251, 340);
+            this.clearButton.Name = "clearButton";
+            this.clearButton.Size = new System.Drawing.Size(106, 44);
+            this.clearButton.TabIndex = 23;
+            this.clearButton.Text = "Clear";
+            this.clearButton.UseVisualStyleBackColor = true;
+            this.clearButton.Click += new System.EventHandler(this.button5_Click);
             // 
             // label9
             // 
@@ -255,12 +255,12 @@
             this.label9.TabIndex = 24;
             this.label9.Text = "Plain text";
             // 
-            // textBox10
+            // PBox
             // 
-            this.textBox10.Location = new System.Drawing.Point(73, 304);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(284, 20);
-            this.textBox10.TabIndex = 25;
+            this.PBox.Location = new System.Drawing.Point(73, 304);
+            this.PBox.Name = "PBox";
+            this.PBox.Size = new System.Drawing.Size(284, 20);
+            this.PBox.TabIndex = 25;
             // 
             // label10
             // 
@@ -276,30 +276,30 @@
             this.label10.Text = "Merkle-Hellman";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // richTextBox1
+            // LogsBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(363, 9);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(308, 375);
-            this.richTextBox1.TabIndex = 27;
-            this.richTextBox1.Text = "";
+            this.LogsBox.Location = new System.Drawing.Point(363, 9);
+            this.LogsBox.Name = "LogsBox";
+            this.LogsBox.Size = new System.Drawing.Size(308, 375);
+            this.LogsBox.TabIndex = 27;
+            this.LogsBox.Text = "";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(679, 390);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.LogsBox);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.textBox10);
+            this.Controls.Add(this.PBox);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.clearButton);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.textBox8);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.decryptButton);
+            this.Controls.Add(this.encryptButton);
+            this.Controls.Add(this.EBox);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label7);
@@ -335,16 +335,16 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox EBox;
+        private System.Windows.Forms.Button encryptButton;
+        private System.Windows.Forms.Button decryptButton;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button clearButton;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox PBox;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox LogsBox;
     }
 }
