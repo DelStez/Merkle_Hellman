@@ -54,6 +54,8 @@
             this.PBox = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.LogsBox = new System.Windows.Forms.RichTextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -162,7 +164,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(12, 264);
+            this.label7.Location = new System.Drawing.Point(12, 312);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 13);
             this.label7.TabIndex = 11;
@@ -177,22 +179,24 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(12, 231);
+            this.textBox6.Location = new System.Drawing.Point(12, 234);
+            this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(345, 20);
+            this.textBox6.Size = new System.Drawing.Size(345, 59);
             this.textBox6.TabIndex = 14;
             this.textBox6.Text = "0100101110100101";
             // 
             // EBox
             // 
-            this.EBox.Location = new System.Drawing.Point(73, 264);
+            this.EBox.Location = new System.Drawing.Point(12, 328);
+            this.EBox.Multiline = true;
             this.EBox.Name = "EBox";
-            this.EBox.Size = new System.Drawing.Size(284, 20);
+            this.EBox.Size = new System.Drawing.Size(344, 86);
             this.EBox.TabIndex = 15;
             // 
             // encryptButton
             // 
-            this.encryptButton.Location = new System.Drawing.Point(13, 340);
+            this.encryptButton.Location = new System.Drawing.Point(12, 586);
             this.encryptButton.Name = "encryptButton";
             this.encryptButton.Size = new System.Drawing.Size(110, 44);
             this.encryptButton.TabIndex = 17;
@@ -202,7 +206,7 @@
             // 
             // decryptButton
             // 
-            this.decryptButton.Location = new System.Drawing.Point(129, 340);
+            this.decryptButton.Location = new System.Drawing.Point(128, 586);
             this.decryptButton.Name = "decryptButton";
             this.decryptButton.Size = new System.Drawing.Size(116, 44);
             this.decryptButton.TabIndex = 18;
@@ -238,7 +242,7 @@
             // 
             // clearButton
             // 
-            this.clearButton.Location = new System.Drawing.Point(251, 340);
+            this.clearButton.Location = new System.Drawing.Point(250, 586);
             this.clearButton.Name = "clearButton";
             this.clearButton.Size = new System.Drawing.Size(106, 44);
             this.clearButton.TabIndex = 23;
@@ -249,7 +253,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(17, 304);
+            this.label9.Location = new System.Drawing.Point(12, 437);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(50, 13);
             this.label9.TabIndex = 24;
@@ -257,9 +261,10 @@
             // 
             // PBox
             // 
-            this.PBox.Location = new System.Drawing.Point(73, 304);
+            this.PBox.Location = new System.Drawing.Point(12, 453);
+            this.PBox.Multiline = true;
             this.PBox.Name = "PBox";
-            this.PBox.Size = new System.Drawing.Size(284, 20);
+            this.PBox.Size = new System.Drawing.Size(344, 127);
             this.PBox.TabIndex = 25;
             // 
             // label10
@@ -280,15 +285,37 @@
             // 
             this.LogsBox.Location = new System.Drawing.Point(363, 9);
             this.LogsBox.Name = "LogsBox";
-            this.LogsBox.Size = new System.Drawing.Size(308, 375);
+            this.LogsBox.Size = new System.Drawing.Size(308, 621);
             this.LogsBox.TabIndex = 27;
             this.LogsBox.Text = "";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(277, 208);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(79, 26);
+            this.button2.TabIndex = 28;
+            this.button2.Text = "...";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(277, 299);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(79, 26);
+            this.button3.TabIndex = 29;
+            this.button3.Text = "...";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(679, 390);
+            this.ClientSize = new System.Drawing.Size(679, 642);
+            this.Controls.Add(this.button3);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.LogsBox);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.PBox);
@@ -319,6 +346,10 @@
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button button3;
+
+        private System.Windows.Forms.Button button2;
 
         #endregion
         private System.Windows.Forms.TextBox textBox1;

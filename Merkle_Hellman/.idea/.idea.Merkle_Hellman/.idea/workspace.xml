@@ -69,7 +69,8 @@
       <option name="presentableId" value="Default" />
       <updated>1684963349682</updated>
       <workItem from="1684963349804" duration="3972000" />
-      <workItem from="1684967550637" duration="3094000" />
+      <workItem from="1684967550637" duration="3693000" />
+      <workItem from="1685058706525" duration="343000" />
     </task>
     <servers />
   </component>
@@ -101,23 +102,23 @@
           <line>12</line>
           <properties documentPath="G:\GitHub\Merkle_Hellman\Merkle_Hellman\Form1.cs" initialLine="45" containingFunctionPresentation="method 'button1_Click'">
             <startOffsets>
-              <option value="1450" />
+              <option value="1515" />
             </startOffsets>
             <endOffsets>
-              <option value="1451" />
+              <option value="1516" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Form1.cs</url>
-          <line>181</line>
+          <line>195</line>
           <properties documentPath="G:\GitHub\Merkle_Hellman\Merkle_Hellman\Form1.cs" initialLine="143" containingFunctionPresentation="method 'button2_Click'">
             <startOffsets>
-              <option value="3750" />
+              <option value="3815" />
             </startOffsets>
             <endOffsets>
-              <option value="3778" />
+              <option value="3843" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,7 @@ namespace Merkle_Hellman
 {
     public partial class Form1 : Form
     {
+        public OpenFileDialog openDialog = new OpenFileDialog();
         public delegate void UpdateTextBoxDelegate(string textBoxString, Color color); // тип делегата 
         public UpdateTextBoxDelegate UpdateTextBox; // объект делегата
         public MyMerkleHellman MyMerkleHellmanClass;
@@ -177,6 +179,34 @@ namespace Merkle_Hellman
         private void label10_Click(object sender, EventArgs e)
         {
             throw new System.NotImplementedException();
+        }
+
+        private void button2_Click_1(object sender, EventArgs e)
+        {
+            openDialog.FileName = string.Empty;
+            openDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            openDialog.FilterIndex = 2;
+            if (openDialog.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamReader reader = new StreamReader(openDialog.FileName))
+                {
+                    textBox6.Text = reader.ReadToEnd();
+                }
+            }
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            openDialog.FileName = string.Empty;
+            openDialog.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
+            openDialog.FilterIndex = 2;
+            if (openDialog.ShowDialog() == DialogResult.OK)
+            {
+                using (StreamReader reader = new StreamReader(openDialog.FileName))
+                {
+                    PBox.Text = reader.ReadToEnd();
+                }
+            }
         }
     }
 }
